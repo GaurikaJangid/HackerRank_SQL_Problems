@@ -1,0 +1,12 @@
+/* Method-1 (MySQL) */
+
+SELECT DISTINCT city
+FROM station
+WHERE LEFT(city,1) IN ('a','e','i','o','u') AND RIGHT(city,1) IN ('a','e','i','o','u');
+
+
+/* Method-2 (MS SQL Server) */
+
+SELECT DISTINCT city
+FROM station
+WHERE city LIKE '[aeiou]%[aeiou]';

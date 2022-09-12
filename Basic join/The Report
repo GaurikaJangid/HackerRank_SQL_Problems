@@ -1,0 +1,8 @@
+
+SELECT (CASE WHEN grade>=8 THEN name
+             ELSE NULL
+             END) AS name, g.grade, s.marks
+FROM students as s
+JOIN grades as g
+ON marks BETWEEN min_mark AND max_mark 
+ORDER BY grade desc, name, marks;
